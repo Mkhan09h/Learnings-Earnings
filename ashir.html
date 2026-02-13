@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Subscribe</title>
+
+<style>
+body{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+}
+
+input{
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #218838;
+}
+
+#message{
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Subscribe Now</h2>
+
+<input type="email" id="email" placeholder="Enter your email">
+<button onclick="subscribe()">Subscribe</button>
+
+<div id="message"></div>
+
+<script>
+function subscribe() {
+    var email = document.getElementById("email").value;
+    
+    if(email === ""){
+        alert("Please enter your email!");
+    } else {
+        document.getElementById("message").innerHTML = "Thanks for subscribing!";
+        document.getElementById("email").value = "";
+    }
+}
+</script>
+
+</body>
+</html>
